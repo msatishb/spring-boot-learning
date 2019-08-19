@@ -13,7 +13,7 @@ public class JDBCConnectionExample {
 		"jdbc:oracle:thin:@localhost:1521:xe","system","satish");  
 		//here sonoo is database name, root is username and password  
 		Statement stmt=con.createStatement();  
-		ResultSet rs=stmt.executeQuery("select * from emp");  
+		ResultSet rs=stmt.executeQuery("select * from emp where JOB='MANAGER'");  
 		while(rs.next())  
 		System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3) +" "+ rs.getString(4)
 		+" "+rs.getDate(5) + " "+ rs.getInt(6) );  
